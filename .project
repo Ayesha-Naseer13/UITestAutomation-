@@ -20,4 +20,11 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/test/resources/drivers/chrome.exe</name>
+			<type>1</type>
+			<location>C:/Users/HC/Downloads/chrome-win64/chrome-win64/chrome.exe</location>
+		</link>
+	</linkedResources>
 </projectDescription>
