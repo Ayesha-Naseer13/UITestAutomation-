@@ -11,6 +11,7 @@ import io.cucumber.java.en.When;
 public class LanguageStepDefinitions {
 
     WebDriver driver;
+    
 
     @Given("I am on the Daraz homepage")
     public void i_am_on_the_daraz_homepage() {
@@ -19,6 +20,7 @@ public class LanguageStepDefinitions {
         
         // Initialize ChromeDriver and navigate to the Daraz homepage
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("https://www.daraz.pk/");
     }
 

@@ -24,6 +24,7 @@ public class DarazLoginPage {
     public void enterUsername(String username) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement usernameInput = wait.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
+        
         usernameInput.sendKeys(username);
     }
 
