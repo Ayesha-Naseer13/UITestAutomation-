@@ -8,9 +8,8 @@ public class DarazSearchPage {
     WebDriver driver;
 
     // Locators
-    By searchBox = By.id("q");  // Assuming the search box has the id 'q'
-    By searchButton = By.className("search-box__button--1oH7");  // Example of a search button locator
-
+    By searchBox = By.id("q");  
+    By searchButton = By.className("search-box__button--1oH7");  
     // Constructor
     public DarazSearchPage(WebDriver driver) {
         this.driver = driver;
