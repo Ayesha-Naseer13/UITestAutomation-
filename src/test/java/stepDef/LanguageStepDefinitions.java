@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -44,4 +45,11 @@ public class LanguageStepDefinitions {
         // Navigate back to the homepage
         driver.get("https://www.daraz.pk/");
     }
+    @After
+	public void tearDown() {
+		// Close the browser and clean up
+		if (driver != null) {
+			driver.quit();
+		}
+	}
 }

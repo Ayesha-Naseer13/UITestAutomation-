@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="973.54" tests="7" skipped="0" failures="0" errors="0">
-<testcase classname="Language Change Functionality on Daraz" name="Successfully change language to Urdu" time="87.592">
+<testsuite name="Cucumber" time="427.764" tests="7" skipped="0" failures="0" errors="0">
+<testcase classname="Language Change Functionality on Daraz" name="Successfully change language to Urdu" time="106.898">
 <system-out><![CDATA[
 Given I am on the Daraz homepage............................................passed
 When I click on the language change button..................................passed
@@ -8,7 +8,7 @@ And I select Urdu as the language...........................................pass
 Then I return to the homepage...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Daraz login functionality" name="Successful login with valid credentials on Daraz" time="39.64">
+<testcase classname="Daraz login functionality" name="Successful login with valid credentials on Daraz" time="53.132">
 <system-out><![CDATA[
 Given user is on the Daraz login page.......................................passed
 When user enters valid credentials..........................................passed
@@ -16,7 +16,7 @@ And user clicks on the Daraz login button...................................pass
 Then user is navigated to the Daraz home page...............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Daraz login functionality" name="Unsuccessful login with invalid credentials on Daraz" time="49.628">
+<testcase classname="Daraz login functionality" name="Unsuccessful login with invalid credentials on Daraz" time="47.476">
 <system-out><![CDATA[
 Given user is on the Daraz login page.......................................passed
 When user enters invalid credentials........................................passed
@@ -24,7 +24,7 @@ And user clicks on the Daraz login button...................................pass
 Then an error message is displayed..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Daraz login functionality" name="Unsuccessful login with empty fields on Daraz" time="48.112">
+<testcase classname="Daraz login functionality" name="Unsuccessful login with empty fields on Daraz" time="42.709">
 <system-out><![CDATA[
 Given user is on the Daraz login page.......................................passed
 When user enters empty credentials..........................................passed
@@ -32,7 +32,7 @@ And user clicks on the Daraz login button...................................pass
 Then an error message is displayed..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Daraz login functionality" name="Unsuccessful login with missing username on Daraz" time="44.61">
+<testcase classname="Daraz login functionality" name="Unsuccessful login with missing username on Daraz" time="74.299">
 <system-out><![CDATA[
 Given user is on the Daraz login page.......................................passed
 When user enters credentials................................................passed
@@ -40,7 +40,7 @@ And user clicks on the Daraz login button...................................pass
 Then an error message is displayed..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Daraz login functionality" name="Unsuccessful login with missing password on Daraz" time="47.758">
+<testcase classname="Daraz login functionality" name="Unsuccessful login with missing password on Daraz" time="37.687">
 <system-out><![CDATA[
 Given user is on the Daraz login page.......................................passed
 When user enters credentials................................................passed
@@ -48,12 +48,11 @@ And user clicks on the Daraz login button...................................pass
 Then an error message is displayed..........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Product Search on Daraz" name="Searching for products using keywords from an Excel file" time="655.672">
+<testcase classname="Search functionality on Daraz website" name="Searching for an item from Excel" time="65.367">
 <system-out><![CDATA[
-Given user is on the Daraz homepage.........................................passed
-When user searches for products from Excel sheet "Sheet1"...................passed
-Then search results are displayed for the keywords from Excel...............passed
+Given I am on the homepage..................................................passed
+When I search for the term from Excel.......................................passed
+Then I should see search results............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
-e>
