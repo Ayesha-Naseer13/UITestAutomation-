@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,7 +21,7 @@ public class DarazSignUpStepDef {
     private WebDriver driver;
     private DarazSignupPage darazSignUpPage;
 
-    @Given("user is on the Daraz signup page")
+    @Given("the user is on the Daraz signup page")
     public void user_is_on_the_daraz_signup_page() {
         driver = DriverManager.getDriver();
         driver.manage().window().maximize();
@@ -28,8 +29,8 @@ public class DarazSignUpStepDef {
         darazSignUpPage = new DarazSignupPage(driver);
     }
 
-    @When("user enters {string} details")
-    public void user_enters_details(String detailType, io.cucumber.datatable.DataTable dataTable) {
+    @When("the user enters {string} details:")
+    public void user_enters_details(String detailType, DataTable dataTable) {
         List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
         String phoneNumber = data.get(0).get("phoneNumber");
         String smsCode = data.get(0).get("smsCode");
@@ -49,13 +50,13 @@ public class DarazSignUpStepDef {
         waitForPageLoad();
     }
 
-    @And("user clicks on the Daraz signup button")
+    @And("the user clicks on the signup button")
     public void user_clicks_on_the_daraz_signup_button() {
         darazSignUpPage.clickSignUpButton();
         waitForPageLoad();
     }
 
-    @Then("user is navigated to the Daraz home page")
+    @Then("the user should be navigated to the Daraz home page")
     public void user_is_navigated_to_the_daraz_home_page() {
         if (darazSignUpPage.isUserSignedUp()) {
             System.out.println("User is successfully signed up and navigated to the home page.");
@@ -65,7 +66,7 @@ public class DarazSignUpStepDef {
         DriverManager.quitDriver();
     }
 
-    @Then("sign up error message is displayed")
+    @Then("a signup error message should be displayed")
     public void sign_up_error_message_is_displayed() {
         String errorMessage = darazSignUpPage.getErrorMessage();
         if (errorMessage != null && !errorMessage.isEmpty()) {
@@ -77,7 +78,7 @@ public class DarazSignUpStepDef {
     }
 
     private void waitForPageLoad() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Updated constructor
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("someElementId"))); // Replace with actual element ID
     }
 }

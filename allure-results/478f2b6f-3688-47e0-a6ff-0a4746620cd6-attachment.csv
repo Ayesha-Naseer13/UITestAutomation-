@@ -1,0 +1,2 @@
+phoneNumber	smsCode	password	fullName	birthdayMonth	birthdayDay	birthdayYear	gender
+invalidPhone	123	short	Invalid User	February	30	2010	Female
